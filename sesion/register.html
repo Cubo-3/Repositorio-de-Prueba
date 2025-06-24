@@ -1,0 +1,96 @@
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Bartender</title>
+    <link rel="stylesheet" href="../estilos/styles2.css">
+    <style>
+        .login-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.login-form button {
+    padding: 10px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #444;
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Bartender</h1>
+    <h3>Distribuidora Nacional</h3>
+</header>
+
+<nav class="navbar">
+    <ul class="nav-links">
+        <li><a href="../inicio/inicio1.html">Inicio</a></li>
+        <li><a href="../nosotros/nosotros1.html">Nosotros</a></li>
+        <li><a href="../servicios/servicios1.html">Servicios</a></li>
+        <li><a href="../contacto/contacto1.html">Contacto</a></li>
+    </ul>
+
+</nav>
+
+<main class="container">
+
+    <section class="login-container">
+        <h2>Crear Cuenta</h2>
+        <form action="/sesion/procesar_registro.php" method="post" class="login-form">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="usuario">Nombre de usuario:</label>
+            <input type="text" id="usuario" name="usuario" required>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" required>
+
+            <label for="confirmar">Confirmar contraseña:</label>
+            <input type="password" id="confirmar" name="confirmar" required>
+
+            <button type="submit">Registrarse</button>
+        </form>
+        <p>¿Ya tienes una cuenta? <a href="login.html">Inicia sesión aquí</a></p>
+    </section>
+
+</main>
+
+<footer>
+    © 2025 TejoNova. Todos los derechos reservados.
+</footer>
+
+</body>
+</html>
