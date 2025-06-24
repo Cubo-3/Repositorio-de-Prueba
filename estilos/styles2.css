@@ -9,7 +9,7 @@
     header {
         background: linear-gradient(to right, rgb(236, 154, 46), rgb(153, 3, 3));
         color: white;
-        padding: 20px;
+        padding-top: 20px;
         text-align: center;
         box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
@@ -116,4 +116,35 @@
 .logocontainer {
     position: absolute;
     left: 20px;
+}
+
+
+.logo-container {
+  flex: 0 0 auto;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+}
+
+.brand h1 {
+  text-align: center;
+  flex-grow: 1;
+    margin: 0;
+
+}
+
+.navbar {
+    margin-bottom: 0;
+
+}
+.brand h1 {
+  margin: 0;
+  font-weight: normal;
+  }
+
+.brand h3{
+    margin: 0;
+    padding: 10px;
 }
