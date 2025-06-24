@@ -5,13 +5,15 @@
             background-color: #f7f7f7;
             color: #333;
         }
-        header {
-            background-color: #28a745;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
+
+    header {
+        background: linear-gradient(to right, rgb(236, 154, 46), rgb(153, 3, 3));
+        color: white;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
         .navbar {
             background-color: #333;
             display: flex;
@@ -97,7 +99,6 @@
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s;
-          
         }
 
 
@@ -112,4 +113,7 @@
     align-items: center;
 }
 
-
+.logocontainer {
+    position: absolute;
+    left: 20px;
+}
