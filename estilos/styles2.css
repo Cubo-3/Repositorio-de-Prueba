@@ -1,0 +1,371 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/bar.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* para que no se desplace al hacer scroll */
+    color: #333;
+}
+
+    header {
+        background: linear-gradient(to right, rgb(236, 154, 46), rgb(153, 3, 3));
+        color: white;
+        padding-top: 20px;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+        .navbar {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+            margin: 0;
+            padding: 0;
+        
+
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #28a745;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px;
+            justify-content: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .block_container, .block_container2 {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            flex: 1 1 45%;
+            min-width: 300px;
+            transition: transform 0.3s;
+        }
+        .block_container:hover, .block_container2:hover {
+            transform: translateY(-5px);
+        }
+        .block {
+            background-color: #eee;
+            height: 200px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-weight: bold;
+            font-size: 18px;
+        }
+.footer {
+    background-color: #5a5a5a;
+    color: #222;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 0px 0 5px 0;
+    width: 100%;
+}
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      color: #222;
+    }
+    .footer-section {
+      margin: 10px 40px;
+      min-width: 250px;
+    }
+    .footer-section h3 {
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #111;
+    }
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-section ul li {
+      margin-bottom: 6px;
+    }
+    .footer-section a {
+      color: #222;
+      text-decoration: none;
+    }
+    .footer-section a:hover {
+      text-decoration: underline;
+    }
+    .footer-bottom {
+      text-align: left;
+      color: #bbb;
+      font-size: 13px;
+      margin-left: 40px;
+      margin-top: 20px;
+    }
+    .contact-btn {
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+      background: #25d366;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 22px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      z-index: 100;
+      transition: background 0.2s;
+    }
+    .contact-btn:hover {
+      background: #1ebd5a;
+    }
+    @media (max-width: 800px) {
+      .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .footer-section {
+        margin: 10px 20px;
+      }
+      .footer-bottom {
+        margin-left: 20px;
+      }
+    }
+    
+
+
+
+.sesion-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 20px;
+        }
+
+.sesion-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+
+.sesion-links a:hover {
+            color: #28a745;
+        }
+        
+.navbar-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logocontainer {
+    position: absolute;
+    left: 20px;
+}
+
+
+.logo-container {
+  flex: 0 0 auto;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+}
+
+.brand h1 {
+  text-align: center;
+  flex-grow: 1;
+    margin: 0;
+
+}
+
+.navbar {
+    margin-bottom: 0;
+
+}
+.brand h1 {
+  margin: 0;
+  font-weight: normal;
+  }
+
+.brand h3{
+    margin: 0;
+    padding: 10px;
+}
+#wrapper {
+    display: flex;
+}
+
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem; /* Oculta la barra lateral por defecto */
+    transition: margin .25s ease-out; /* Animación de deslizamiento */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Sombra sutil */
+}
+
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.3rem; /* Tamaño de fuente del título */
+    font-weight: bold;
+    color: #333;
+    border-bottom: 1px solid #eee;
+}
+
+#sidebar-wrapper .list-group {
+    width: 15rem;
+}
+
+#sidebar-wrapper .list-group-item {
+    color: #333;
+    transition: background-color 0.2s;
+    display: flex; /* Para alinear ícono y texto */
+    align-items: center;
+}
+
+#sidebar-wrapper .list-group-item:hover {
+    background-color: #e2e6ea;
+    color: #007bff; /* Color al pasar el mouse */
+}
+
+#sidebar-wrapper .list-group-item.active {
+    background-color: #007bff; /* Color de fondo del elemento activo */
+    color: #fff; /* Color de texto del elemento activo */
+    border-color: #007bff;
+}
+
+#sidebar-wrapper .list-group-item .fas {
+    font-size: 1.1rem;
+}
+
+
+#page-content-wrapper {
+    min-width: 100vw; /* Ocupa todo el ancho inicialmente */
+}
+
+/* Cuando el sidebar está "toggled", se mueve hacia la derecha */
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+
+/* Media query para pantallas más grandes (escritorio) */
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0; /* Visible por defecto en escritorios */
+    }
+
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%; /* El contenido se ajusta */
+    }
+
+    /* Cuando se "togglea" en escritorio, se oculta a la izquierda */
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -15rem;
+    }
+}
+
+/* Estilos de las tarjetas del Dashboard */
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+}
+
+.navbar-footer {
+    text-align: left;
+    text-decoration: none;
+    color: #fff  
+}
+
+
+.seccion-eventos {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #222;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.event-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.event-gallery img {
+    width: 200px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.event-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: none;
+}
+
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: none;
+}

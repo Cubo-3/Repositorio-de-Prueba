@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tejobar - Panel de Control</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/dashboard/styles35.css"> <link rel="stylesheet">
+    <link rel="stylesheet" href="styles35.css"> <link rel="stylesheet">
+     <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <div class="d-flex" id="wrapper">
@@ -19,22 +20,19 @@
                 <a href="Reservas.html" class="list-group-item list-group-item-action bg-light">
                     <i class="fas fa-fw fa-calendar-alt mr-2"></i>Reservas
                 </a>
-                <a href="#" class="list-group-item list-group-item-action bg-light">
-                    <i class="fas fa-fw fa-user-injured mr-2"></i>Equipos
+                <a href="../errores/500.html" class="list-group-item list-group-item-action bg-light">
+                    <i class="fas fa-fw fa-uer-injured mr-2"></i>Equipos
                 </a>
-                <a href="#" class="list-group-item list-group-item-action bg-light">
-                    <i class="fas fa-fw fa-user-md mr-2"></i>Capitanes
-                </a>
-                <a href="/index.html" class="list-group-item list-group-item-action bg-light">
+                <a href="../index.html" class="list-group-item list-group-item-action bg-light">
                     <i class="fas fa-fw fa-cog mr-2"></i>Inicio
                 </a>
-                <a href="#" class="list-group-item list-group-item-action bg-light">
+                <a href="clasificacion.html" class="list-group-item list-group-item-action bg-light">
                     <i class="fas fa-fw fa-chart-line mr-2"></i>Clasificacion             </a>
             </div>
         </div>
         <div id="page-content-wrapper">
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
                 <button class="btn btn-primary" id="menu-toggle">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -46,12 +44,14 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-user-circle mr-1"></i>Usuario
+                                <i class="fas fa-user-circle mr-1"></i>Administrador
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="#"><i class="fas fa-user mr-1"></i> Perfil</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/sesion/login.html"><i class="fas fa-sign-out-alt mr-1"></i> Cerrar Sesión</a>
+                                <a class="dropdown-item" href="#" onclick="cerrarSesion()">
+                                    <i class="fas fa-sign-out-alt mr-1"></i> Cerrar Sesión
+                                </a>
                             </div>
                         </li>
                     </ul>
@@ -70,7 +70,7 @@
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                             Reservas (Este mes)</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">15</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">3</div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-calendar-day fa-2x text-gray-300"></i>
@@ -87,7 +87,7 @@
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                             Nuevos equipos (este mes)</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">9</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">3</div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-user-plus fa-2x text-gray-300"></i>
@@ -106,7 +106,7 @@
                                         </div>
                                         <div class="row no-gutters align-items-center">
                                             <div class="col-auto">
-                                                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">8</div>
+                                                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">1</div>
                                             </div>
                                         </div>
                                     </div>
@@ -125,10 +125,10 @@
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                             equipos Registrados</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">12</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">3</div>
                                     </div>
                                     <div class="col-auto">
-                                        <i class="fas fa-user-md fa-2x text-gray-300"></i>
+                                        <i class="fas fa-usemd fa-2x text-gray-300"></i>
                                     </div>
                                 </div>
                             </div>
@@ -192,6 +192,17 @@
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
         });
+            function cerrarSesion() {
+        window.open("../sesion/login.html", "_blank");
+
+        window.close();
+    }
+    function cerrarSesion() {
+    sessionStorage.clear();
+    localStorage.clear();
+
+    window.open("../sesion/login.html", "_blank");
+    window.close();}
     </script>
 </body>
 </html>
