@@ -157,19 +157,21 @@ footer {
 }
 
 .light-mode .hero {
-  background-color: #e0e0e0;
-  color: #222;
-  text-shadow: 2px 2px 4px orange;
+  background-color: transparent;
+  color: #ffa500;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  transition: 1.5s;
 }
 
+
 .light-mode .section {
-  background-color: #fff;
+  background-color: #b3b3b3;
   color: #222;
 }
 
 .light-mode .card {
   background-color: #141414;
-  color: #ffa500;
+  color: #ffffff;
 }
 
 .light-mode footer {
@@ -181,7 +183,13 @@ footer {
   padding: 60px 20px;
   text-align: center;
   background-color: #ffffffd8;
-  color: orange;
+  color: rgb(0, 0, 0);
+  transition: 1.5s;
+}
+
+.light-mode .boton{
+  background-color: #141414;
+  color: white;
 }
 
 .card {
@@ -298,3 +306,18 @@ footer {
   }
 }
 
+.boton {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 25px;
+  background-color: #ffa500;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+  background-color: #ff8800;
+}

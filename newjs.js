@@ -10,21 +10,32 @@
 document.addEventListener("DOMContentLoaded", () => {
   const imagenes = [
     "img/fondo.jpg",
-    "img/fondo1.jpg",
+    "img/fondo1.jpg"
   ];
-
-  let index = 0;
-  let active = true; // controla qué capa está activa
 
   const bg1 = document.querySelector('.hero-bg1');
   const bg2 = document.querySelector('.hero-bg2');
+  const hero = document.querySelector('.hero');
+  const loader = document.getElementById('loader');
+  let index = 0;
+  let active = true;
 
-  // Pre-cargar imágenes
+  // Precarga de imágenes
   imagenes.forEach(src => {
     const img = new Image();
     img.src = src;
   });
 
+  // Cargar la imagen inicial
+  const imgInicial = new Image();
+  imgInicial.src = imagenes[0];
+  imgInicial.onload = () => {
+    bg1.style.backgroundImage = `url('${imagenes[0]}')`;
+    hero.classList.remove('oculto');
+    loader.style.display = 'none';
+  };
+
+  // Cambiar imágenes cada 3 segundos
   setInterval(() => {
     index = (index + 1) % imagenes.length;
     const nuevaImagen = imagenes[index];
@@ -41,4 +52,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     active = !active;
   }, 3000);
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const elementos = document.querySelectorAll('.reveal');
+
+  const mostrarElemento = () => {
+    elementos.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        el.classList.add('visible');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', mostrarElemento);
+  mostrarElemento(); // Mostrar los que ya están a la vista al cargar
 });
