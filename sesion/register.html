@@ -1,188 +1,116 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register - TejoBar</title>
-    <link rel="stylesheet" href="../estilos/styles2.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js">    
-    </script>
-    <script>
-        // Script para activar validación de Bootstrap
-        (function() {
-            'use strict';
-            window.addEventListener('load', function() {
-                var forms = document.getElementsByClassName('needs-validation');
-                Array.prototype.filter.call(forms, function(form) {
-                    form.addEventListener('submit', function(event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
-        })();
-
-        // Script para el toggle de la barra lateral (repetido para cada página)
-        $("#menu-toggle").click(function(e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-        });
-    </script>
-    <style>
-            body h1 {
-        color: aliceblue;
-        }
-        .container-fluid  {
-        color: rgb(226, 181, 97);
-        }
-        .container-fluid{
-            margin: 30px ;
-        }
-
-        .form-control{
-            margin-bottom: 8px;
-        }
-
-        .navbar {
-            background-color: #333;
-            display: flex;
-            justify-content: center;
-            padding: 10px 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            position: relative;
-        }
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 40px;
-            margin: 0;
-            padding: 0;
-        }
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        .nav-links a:hover {
-            color: #28a745;
-        }
-
-        .form-row{
-        width: 204.5%;
-        }
-        .container-fluid{
-            width: auto;
-            margin-left: 35%;
-            margin-right: 35%;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registro</title>
+  <link rel="stylesheet" href="sesionstyles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-<header>
-   <div class="logo-container">
-    <img src="../img/Logo.jpg" alt="Logo de Bartender" class="logo">
-  </div>
-  <div class="brand">
-    <h1>TejoBar</h1>
-    <h3>El mejor servicio al alcance de tu mano</h3>
-  </div>
-</header>
+  <header>
+    <div class="logo">TejoBar</div>
+    <nav>
+      <ul class="menu-top">
+        <li><a href="#">🏠Inicio</a></li>
+        <li><a href="#torneos">🥇Torneos</a></li>
+        <li><a href="#menu">🍻Comida y Bebida</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<nav class="navbar">
-    <ul class="nav-links">
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="../nosotros/nosotros1.html">Nosotros</a></li>
-        <li><a href="../servicios/servicios1.html">Servicios</a></li>
-        <li><a href="../contacto/contacto1.html">Contacto</a></li>
-            <li><a href="../dashboard/dashboard.html">Torneo</a></li>
-    </ul>
+  <div class="login-container">
+    <div class="login-box">
+      <div class="avatar">
+        <i class="fas fa-user-plus"></i>
+      </div>
+      <h2>REGISTRO</h2>
 
-</nav>
-            <div class="container-fluid">
-                <h1 class="mt-4">Registrarse</h1>
-                <p>Completa los campos para agendar una nueva cuenta</p>
+      <form id="registerForm" novalidate>
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" id="nombre" placeholder="Nombre completo">
+        </div>
 
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Registrese</h6>
-                    </div>
-                    <div class="card-body">
-                        <form action="#" method="POST" class="needs-validation" novalidate>
-                            <div class="form-row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="fechaCita">Nombre:</label>
-                                    <input type="text" class="form-control" id="fechaCita" name="nombre" required minlength="3">
-                                    <div class="invalid-feedback">
-                                        Por favor, digite un nombre valido.
-                                    </div>
-                                    <label for="correo">Correo:</label>
-                                    <input type="email" class="form-control" id="correo" name="correo"  required>
-                                    <div class="invalid-feedback">
-                                        Por favor, digite una correo válido.
-                                    </div>
-                                </div>                                 
-                            </div>
-                                                  
-                        
-     <div class="form-group">
-    <label for="motivo">Contraseña:</label>
-    <input type="password" class="form-control" id="contraseña" name="contrasena" rows="1" placeholder="" required minlength="4">
-    </input>
-    <div class="invalid-feedback">
-        la contraseña debe tener minimo 4 caracteres
-    </div> 
-    
-    <div class="form-group">
-        <label for="motivo">Confirmar contraseña:</label>
-        <input type="password" class="form-control" id="confirmar" name="contrasena" rows="1" placeholder="" required minlength="4">
-        </input>
-        <div class="invalid-feedback" id="error-confirmacion">
-            la contraseña debe ser igual que la anterior
-        </div> 
+        <div class="input-group">
+          <i class="fas fa-user-tag"></i>
+          <select id="rol">
+            <option value="">Selecciona tu rol</option>
+            <option value="jugador">Jugador</option>
+            <option value="capitan">Capitán</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" id="email" placeholder="Correo electrónico">
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="password" placeholder="Contraseña (mín. 4 caracteres)">
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="confirmPassword" placeholder="Confirmar contraseña">
+        </div>
+
+        <div id="error-msg" class="error-msg"></div>
+
+        <button type="submit" class="btn-login">Registrarse</button>
+        <a href="login.html" class="forgot">¿Ya tienes cuenta? Inicia sesión</a>
+      </form>
     </div>
-</div>
+  </div>
 
-<script>
-document.querySelector("form")?.addEventListener("submit", function(e) {
-    const pass1 = document.getElementById("contraseña");
-    const pass2 = document.getElementById("confirmar");
-    const error = document.getElementById("error-confirmacion");
+  <script>
+    document.getElementById("registerForm").addEventListener("submit", function (e) {
+      e.preventDefault();
 
-    if (pass1.value !== pass2.value) {
-        e.preventDefault(); // Evita el envío
-        error.style.display = "block";
-        pass2.classList.add("is-invalid");
-    } else {
-        error.style.display = "none";
-        pass2.classList.remove("is-invalid");
-    }
-});
-</script>
+      const nombre = document.getElementById("nombre").value.trim();
+      const rol = document.getElementById("rol").value;
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const confirmPassword = document.getElementById("confirmPassword").value.trim();
+      const errorMsg = document.getElementById("error-msg");
 
-                            <button type="submit" class="btn btn-primary">Registrarse</button>
-                            <button type="reset" class="btn btn-secondary">Limpiar Campos</button>
-                            <hr>
-                            <p>Si ya tienes cuenta inicie sesion <a href="login.html">aqui</a></p>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-</main>
+      errorMsg.textContent = "";
 
-<footer>
-    © 2025 TejoBar. Todos los derechos reservados.
-</footer>
+      const emailRegex = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+
+      // Validaciones
+      if (nombre === "") {
+        errorMsg.textContent = "El nombre no puede estar vacío.";
+        return;
+      }
+
+      if (rol === "") {
+        errorMsg.textContent = "Selecciona un rol válido.";
+        return;
+      }
+
+      if (!emailRegex.test(email)) {
+        errorMsg.textContent = "El correo electrónico no es válido.";
+        return;
+      }
+
+      if (password.length < 4) {
+        errorMsg.textContent = "La contraseña debe tener al menos 4 caracteres.";
+        return;
+      }
+
+      if (password !== confirmPassword) {
+        errorMsg.textContent = "Las contraseñas no coinciden.";
+        return;
+      }
+
+      // Si todo está bien
+      alert(`¡Registro exitoso! Bienvenido, ${nombre} (${rol})`);
+      // Aquí puedes redirigir o enviar los datos a un servidor
+    });
+  </script>
 
 </body>
 </html>
