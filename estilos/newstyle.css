@@ -25,6 +25,7 @@ footer {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+  transition: 1s;
 }
 header {
   background-color: #141414;
