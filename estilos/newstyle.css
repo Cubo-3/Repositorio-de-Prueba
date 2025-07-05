@@ -16,6 +16,16 @@ footer {
   transition: background-color 1.5s, color 0.5s;
 }
 
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 header {
   background-color: #141414;
   color: #ffa500;
