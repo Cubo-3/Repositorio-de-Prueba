@@ -17,6 +17,8 @@ header {
 .logo {
   font-size: 28px;
   font-weight: bold;
+  text-decoration: none;
+  color: #ffa500;
 }
 
 nav ul {

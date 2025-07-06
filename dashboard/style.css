@@ -13,6 +13,10 @@ body {
     transition: margin .25s ease-out; /* Animación de deslizamiento */
     box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Sombra sutil */
 }
+.list-group-item.active{
+    color: #333;
+}
+
 
 #sidebar-wrapper .sidebar-heading {
     padding: 0.875rem 1.25rem;
