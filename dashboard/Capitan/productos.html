@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tejobar - Panel de Control</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../styles35.css"> <link rel="stylesheet">
+    <link rel="stylesheet" href="styles35.css">
+    <link rel="stylesheet" href="style.css">
          <link rel="stylesheet" href="../style.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 </head>
@@ -15,20 +16,24 @@
         <div class="bg-light border-right" id="sidebar-wrapper">
             <div class="sidebar-heading">Tejobar</div>
             <div class="list-group list-group-flush">
-                <a href="#" class="list-group-item list-group-item-action bg-light active">
+                <a href="dashboard.html" class="list-group-item list-group-item-action bg-light active">
                     <i class="fas fa-fw fa-tachometer-alt mr-2"></i>Panel de Control
                 </a>
                 <a href="Reservas.html" class="list-group-item list-group-item-action bg-light">
                     <i class="fas fa-fw fa-calendar-alt mr-2"></i>Reservas
                 </a>
-                <a href="../../errores/500.html" class="list-group-item list-group-item-action bg-light">
-                    <i class="fas fa-fw f-user-injured mr-2"></i>Equipos
+                <a href="../errores/500.html" class="list-group-item list-group-item-action bg-light">
+                    <i class="fas fa-fw fa-uer-injured mr-2"></i>Equipos
                 </a>
                 <a href="../index.html" class="list-group-item list-group-item-action bg-light">
                     <i class="fas fa-fw fa-cog mr-2"></i>Inicio
                 </a>
-                <a href="../clasificacion.html" class="list-group-item list-group-item-action bg-light">
+                <a href="clasificacion.html" class="list-group-item list-group-item-action bg-light">
                     <i class="fas fa-fw fa-chart-line mr-2"></i>Clasificacion             </a>
+
+
+                <a href="productos.html" class="list-group-item list-group-item-action bg-light">
+                    <i class="fas fa-fw fa-chart-line mr-2"></i>productos             </a>
             </div>
         </div>
         <div id="page-content-wrapper">
@@ -62,6 +67,10 @@
             <div class="container-fluid">
                 <h1 class="mt-4">Panel de Control Principal</h1>
                 <p>El mejor servicio de Tejo al alcance de tu mano</p>
+                <br><hr>
+
+                
+                    
 
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
@@ -71,36 +80,52 @@
                         <div class="table-responsive">
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
-                                    <tr>
-                                        <th>Fecha</th>
-                                        <th>Hora</th>
-                                        <th>Capitan</th>
-                                        <th>Cancha</th>
-                                        <th>Estado</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>24/07/2025</td>
-                                        <td>10:00-12:00 AM</td>
-                                        <td>Felipe Parra</td>
-                                        <td>1</td>
-                                        <td>Confirmada</td>
-                                    </tr>
-                                    <tr>
-                                        <td>24/07/2025</td>
-                                        <td>10:00-12:00 AM</td>
-                                        <td>Kevin Franco</td>
-                                        <td>2</td>
-                                        <td>Confirmada</td>
-                                    </tr>
-                                    <tr>
-                                        <td>25/06/2025</td>
-                                        <td>08:00-10:00 AM</td>
-                                        <td>Andres Ibarra</td>
-                                        <td>1</td>
-                                        <td>Pendiente</td>
-                                    </tr>
+<tr>
+    <th>producto</th>
+    <th>stock</th>
+    <th>fecha de vencimiento</th>
+    <th>precio</th>
+</tr>
+</thead>
+<tbody>
+    <tr>
+        <td>Cerveza Artesanal</td>
+        <td>30</td>
+        <td>12/12/2025</td>
+        <td>$8.000</td>
+    </tr>
+    <tr>
+        <td>Salchipapa</td>
+        <td>20</td>
+        <td>10/08/2025</td>
+        <td>$12.000</td>
+    </tr>
+    <tr>
+        <td>Picada</td>
+        <td>15</td>
+        <td>15/09/2025</td>
+        <td>$25.000</td>
+    </tr>
+    <tr>
+        <td>Empanadas x5</td>
+        <td>50</td>
+        <td>30/07/2025</td>
+        <td>$7.000</td>
+    </tr>
+    <tr>
+        <td>Refresco</td>
+        <td>40</td>
+        <td>01/11/2025</td>
+        <td>$2.500</td>
+    </tr>
+    <tr>
+        <td>Aguardiente Antioqueño</td>
+        <td>10</td>
+        <td>05/05/2026</td>
+        <td>$35.000</td>
+    </tr>
+</tbody>
+
                                 </tbody>
                             </table>
                         </div>
@@ -120,7 +145,7 @@
             $("#wrapper").toggleClass("toggled");
         });
             function cerrarSesion() {
-        window.open("../../sesion/login.html",);
+        window.open("../sesion/login.html", "_blank");
 
         window.close();
     }
@@ -128,7 +153,7 @@
     sessionStorage.clear();
     localStorage.clear();
 
-    window.open("../../sesion/login.html");
+    window.open("../sesion/login.html", "_blank");
     window.close();}
     </script>
 </body>

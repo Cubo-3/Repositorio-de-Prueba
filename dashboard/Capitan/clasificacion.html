@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tejobar - Panel de Control</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../styles35.css"> <link rel="stylesheet">
+    <link rel="stylesheet" href="styles35.css">
+    <link rel="stylesheet" href="style.css">
          <link rel="stylesheet" href="../style.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 </head>
@@ -15,19 +16,19 @@
         <div class="bg-light border-right" id="sidebar-wrapper">
             <div class="sidebar-heading">Tejobar</div>
             <div class="list-group list-group-flush">
-                <a href="#" class="list-group-item list-group-item-action bg-light active">
+                <a href="dashboard.html" class="list-group-item list-group-item-action bg-light active">
                     <i class="fas fa-fw fa-tachometer-alt mr-2"></i>Panel de Control
                 </a>
                 <a href="Reservas.html" class="list-group-item list-group-item-action bg-light">
                     <i class="fas fa-fw fa-calendar-alt mr-2"></i>Reservas
                 </a>
                 <a href="../../errores/500.html" class="list-group-item list-group-item-action bg-light">
-                    <i class="fas fa-fw f-user-injured mr-2"></i>Equipos
+                    <i class="fas fa-fw fa-uer-injured mr-2"></i>Equipos
                 </a>
-                <a href="../index.html" class="list-group-item list-group-item-action bg-light">
+                <a href="../../index.html" class="list-group-item list-group-item-action bg-light">
                     <i class="fas fa-fw fa-cog mr-2"></i>Inicio
                 </a>
-                <a href="../clasificacion.html" class="list-group-item list-group-item-action bg-light">
+                <a href="#" class="list-group-item list-group-item-action bg-light">
                     <i class="fas fa-fw fa-chart-line mr-2"></i>Clasificacion             </a>
             </div>
         </div>
@@ -63,6 +64,9 @@
                 <h1 class="mt-4">Panel de Control Principal</h1>
                 <p>El mejor servicio de Tejo al alcance de tu mano</p>
 
+                
+                    
+
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
                         <h6 class="m-0 font-weight-bold text-primary">Próximas Partidos</h6>
@@ -72,34 +76,30 @@
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
-                                        <th>Fecha</th>
-                                        <th>Hora</th>
+                                        <th>Dia</th>
                                         <th>Capitan</th>
-                                        <th>Cancha</th>
-                                        <th>Estado</th>
+                                        <th>Hora</th>
+                                        <th>Premio</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>24/07/2025</td>
-                                        <td>10:00-12:00 AM</td>
                                         <td>Felipe Parra</td>
-                                        <td>1</td>
-                                        <td>Confirmada</td>
+                                        <td>08:00-10:00</td>
+                                        <th>Trofeo</th>
                                     </tr>
                                     <tr>
                                         <td>24/07/2025</td>
-                                        <td>10:00-12:00 AM</td>
                                         <td>Kevin Franco</td>
-                                        <td>2</td>
-                                        <td>Confirmada</td>
+                                        <td>10:00-12:00</td>
+                                        <th>20.000$</th>
                                     </tr>
                                     <tr>
-                                        <td>25/06/2025</td>
-                                        <td>08:00-10:00 AM</td>
-                                        <td>Andres Ibarra</td>
-                                        <td>1</td>
-                                        <td>Pendiente</td>
+                                        <td>24/06/2025</td>
+                                        <td>Sebastian Ibarra</td>
+                                        <td>12:00-14:00</td>
+                                        <th>1 sixpack</th>
                                     </tr>
                                 </tbody>
                             </table>
@@ -120,7 +120,7 @@
             $("#wrapper").toggleClass("toggled");
         });
             function cerrarSesion() {
-        window.open("../../sesion/login.html",);
+        window.open("../sesion/login.html", "_blank");
 
         window.close();
     }
@@ -128,7 +128,7 @@
     sessionStorage.clear();
     localStorage.clear();
 
-    window.open("../../sesion/login.html");
+    window.open("../sesion/login.html", "_blank");
     window.close();}
     </script>
 </body>
