@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalles del Producto - TejoBar</title>
+  <link rel="stylesheet" href="productos.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <a href="../index.html" class="logo">TejoBar</a>
+    <nav>
+      <ul class="menu-top">
+        <li><a href="../index.html">🏠Inicio</a></li>
+        <li><a href="../torneos/torneos.html">🥇Torneos</a></li>
+        <li><a href="productos.html">🍻Comida y Bebida</a></li>
+        <li><a href="../sesion/login.html">🔓Iniciar Sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- DETALLE DEL PRODUCTO -->
+  <section class="section">
+    <h2>🍻 Cerveza Artesanal</h2>
+    <div class="detalle-producto">
+      <div class="detalle-imagen">
+        <img src="../img/cerveza.jpg" alt="Cerveza Artesanal">
+      </div>
+      <div class="detalle-info">
+        <h3>Cerveza Artesanal</h3>
+        <p class="detalle-descripcion">
+          Una cerveza local, fresca y con carácter. Perfecta para acompañar tu partida de tejo o simplemente para relajarte. 
+        </p>
+        <p class="detalle-precio">$8.000 <span class="detalle-volumen">/ Botella 330ml</span></p>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" value="1" />
+        <br>
+        <button class="btn-comprar">🛒 Comprar ahora</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 TejoBar. Todos los derechos reservados.</p>
+  </footer>
+
+  <button id="toggle-btn">🌞 Modo Claro</button>
+  <script src="modo-claro.js"></script>
+</body>
+</html>

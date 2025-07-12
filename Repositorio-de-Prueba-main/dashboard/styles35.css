@@ -13,10 +13,6 @@ body {
     transition: margin .25s ease-out; /* Animación de deslizamiento */
     box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Sombra sutil */
 }
-.list-group-item.active{
-    color: #333;
-}
-
 
 #sidebar-wrapper .sidebar-heading {
     padding: 0.875rem 1.25rem;
@@ -44,7 +40,7 @@ body {
 
 #sidebar-wrapper .list-group-item.active {
     background-color: #007bff; /* Color de fondo del elemento activo */
-    color: black; /* Color de texto del elemento activo */
+    color: #fff; /* Color de texto del elemento activo */
     border-color: #007bff;
 }
 
@@ -174,57 +170,4 @@ body {
 
 .card-header h3 {
     font-weight: bold;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: #595f5f;
-  color: white;
-  font-size: 16px;
-  margin-top: 40px;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-th, td {
-  padding: 14px 20px;
-  text-align: left;
-  border-bottom: 1px solid #444;
-}
-
-th {
-  background-color: #141414;
-  color: #ffa500;
-  font-weight: bold;
-}
-
-.btn-eliminar {
-  background-color: #ff4d4d;
-  color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.btn-eliminar:hover {
-  background-color: #d93636;
-}
-
-.btn-comprar-carrito {
-  background-color: #ffa500;
-  color: #000;
-  padding: 12px 28px;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn-comprar-carrito:hover {
-  background-color: #e69500;
 }

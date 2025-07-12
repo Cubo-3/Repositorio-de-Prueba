@@ -10,7 +10,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const imagenes = [
     "img/fondo.jpg",
-    "img/fondo1.jpg"
+    "img/fondo2.jpg"
   ];
 
   const bg1 = document.querySelector('.hero-bg1');
