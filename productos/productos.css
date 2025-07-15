@@ -294,6 +294,7 @@ input[type="number"] {
   border-radius: 30px;
   cursor: pointer;
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .btn-comprar:hover {
