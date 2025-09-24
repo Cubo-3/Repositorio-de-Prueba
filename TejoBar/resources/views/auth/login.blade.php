@@ -265,12 +265,6 @@ h2 {
                 <input type="password" name="password" placeholder="Contraseña" required>
             </div>
 
-            <div class="remember-me" style="margin-bottom: 20px; text-align: left;">
-                <label style="color: white; font-size: 14px; display: flex; align-items: center; cursor: pointer;">
-                    <input type="checkbox" name="remember" value="1" style="margin-right: 8px;">
-                    Recordarme
-                </label>
-            </div>
 
             <button type="submit" class="btn-login">Iniciar Sesión</button>
             <a href="{{ route('register') }}" class="forgot">¿No tienes cuenta? Regístrate</a>
